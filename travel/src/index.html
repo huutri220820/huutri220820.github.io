@@ -11,14 +11,15 @@
 			integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/test.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
 		<header class="header">
-			<nav id="navbar" class="nav">
+			<nav id="navbar" class="nav relative">
 				<img class="max-h-full nav-logo" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
-				<div class="nav__menu hidden lg:flex justify-between items-center w-full h-full">
+				<div id="nav__menu" class="flex justify-between items-center w-full h-full">
 					<ul id="hoz-menu" class="items-center justify-between flex">
 						<li class="nav__menu-item">
 							<a href="#">Trang chủ</a>
@@ -37,9 +38,13 @@
 						<button class="btn btn-outline">Đăng nhập</button>
 						<button class="btn btn-primary">Đăng kí</button>
 					</div>
+					<!-- close btn -->
+					<button id="close-menu" class="absolute top-6 left-8 lg:hidden">
+						<i class="fas fa-arrow-right text-xl"></i>
+					</button>
 				</div>
 
-				<div class="space-y-1 lg:hidden cursor-pointer">
+				<div id="hamburger" class="space-y-1 lg:hidden cursor-pointer">
 					<div class="h-1 w-8 bg-lightBlue-700"></div>
 					<div class="h-1 w-8 bg-lightBlue-700"></div>
 					<div class="h-1 w-8 bg-lightBlue-700"></div>
@@ -98,11 +103,8 @@
 				<div class="relative h-20"></div>
 			</section>
 
-			<button
-				id="scrollToTop"
-				class="w-12 h-12 rounded-full bg-white hover:bg-lightBlue-50 shadow-md border-lightBlue-600 border-2 fixed bottom-5 right-5 z-10"
-			>
-				<i class="fal fa-angle-up font-medium text-lightBlue-600"></i>
+			<button id="scrollToTop" class="w-12 h-12 rounded-full bg-black bg-opacity-20 fixed bottom-5 right-5 z-10">
+				<i class="fal fa-angle-up font-medium text-white"></i>
 			</button>
 		</header>
 		<!-- end header -->
@@ -629,64 +631,100 @@
 				</div>
 
 				<div class="recommend-container">
-					<div class="recommend-card">
-						<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
-						<div class="overlay rounded-md"></div>
-						<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
-							<h5 class="text-white font-medium flex-1">Côn đảo</h5>
-							<button class="h-8 w-8 rounded-full">
-								<i class="fas fa-arrow-right text-white"></i>
-							</button>
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="recommend-card">
-						<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
-
-						<div class="overlay rounded-md"></div>
-						<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
-							<h5 class="text-white font-medium flex-1">Côn đảo</h5>
-							<button class="h-8 w-8 rounded-full">
-								<i class="fas fa-arrow-right text-white"></i>
-							</button>
-						</div>
-					</div>
-
-					<div class="recommend-card">
-						<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
-
-						<div class="overlay rounded-md"></div>
-						<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
-							<h5 class="text-white font-medium flex-1">Côn đảo</h5>
-							<button class="h-8 w-8 rounded-full">
-								<i class="fas fa-arrow-right text-white"></i>
-							</button>
-						</div>
-					</div>
-
-					<div class="recommend-card">
-						<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
-
-						<div class="overlay rounded-md"></div>
-						<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
-							<h5 class="text-white font-medium flex-1">Côn đảo</h5>
-							<button class="h-8 w-8 rounded-full">
-								<i class="fas fa-arrow-right text-white"></i>
-							</button>
-						</div>
-					</div>
-
-					<div class="recommend-card">
-						<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
-
-						<div class="overlay rounded-md"></div>
-						<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
-							<h5 class="text-white font-medium flex-1">Côn đảo</h5>
-							<button class="h-8 w-8 rounded-full">
-								<i class="fas fa-arrow-right text-white"></i>
-							</button>
-						</div>
-					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</section>
 		</main>
@@ -774,7 +812,7 @@
 				<p class="text-gray-500 text-sm text-center sm:text-left py-2 px-1">© 2020 dulichviet.com.vn</p>
 			</div>
 		</footer>
-
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script src="./js/external/index.js"></script>
 	</body>
 </html>
