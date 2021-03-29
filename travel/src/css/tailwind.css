@@ -93,14 +93,17 @@ input:focus {
 }
 
 .nav__menu-item::after {
+	transition: all 0.3s;
 	@apply bg-lightBlue-700 w-full block absolute bottom-0 left-0;
 	height: 3px;
 	content: "";
-	display: none;
+	width: 0;
 }
-
+.nav__menu-item:hover {
+	@apply bg-black bg-opacity-10;
+}
 .nav__menu-item:hover::after {
-	display: block;
+	width: 100%;
 }
 
 /* card */
@@ -184,10 +187,14 @@ input:focus {
 		right: 0;
 		height: 100vh;
 		width: min(80vw, 300px);
-		padding: 50px 10px;
+		padding: 50px 12px;
 		background-color: white;
 		transform: translateX(110%);
 		transition: transform 0.3s ease-in-out;
+	}
+
+	#navbar #nav__menu .nav__menu-item {
+		width: 100%;
 	}
 
 	#navbar #nav__menu.active {
@@ -196,5 +203,6 @@ input:focus {
 	#navbar #nav__menu.active #hoz-menu {
 		flex-direction: column;
 		align-items: flex-start;
+		width: 100%;
 	}
 }
