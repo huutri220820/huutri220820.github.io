@@ -1489,7 +1489,7 @@ button:focus, input:focus {
   justify-content: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .blogs-container {
     justify-content: space-between;
   }
@@ -1767,7 +1767,7 @@ button:focus, input:focus {
   justify-content: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .intes-container {
     justify-content: space-between;
   }

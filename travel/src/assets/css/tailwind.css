@@ -130,7 +130,7 @@ input:focus {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, min(268.5px, 100%));
 	grid-gap: 1rem;
-	@apply justify-center lg:justify-between;
+	@apply justify-center xl:justify-between;
 }
 
 .recommend-container {
@@ -227,7 +227,7 @@ input:focus {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, min(360px, 100%));
 	grid-gap: 30px;
-	@apply justify-center lg:justify-between;
+	@apply justify-center xl:justify-between;
 }
 
 .intes-card {
