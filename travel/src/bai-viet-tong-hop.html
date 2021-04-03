@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Trang chủ</title>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+			integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav id="navbar" class="nav relative">
+				<img class="max-h-full nav-logo" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
+				<div id="nav__menu" class="flex justify-between items-center w-full h-full">
+					<ul id="hoz-menu" class="items-center justify-between flex">
+						<a class="nav__menu-item" href="./index.html">
+							<li>Trang chủ</li>
+						</a>
+						<a class="nav__menu-item" href="./diem-den.html">
+							<li>Điểm đến</li>
+						</a>
+						<a class="nav__menu-item active" href="./bai-viet-tong-hop.html">
+							<li>Bài viết tổng hợp</li>
+						</a>
+					</ul>
+					<div class="nav__menu-action">
+						<button class="btn btn-outline">
+							<a href="./login.html">Đăng nhập</a>
+						</button>
+						<button class="btn btn-primary">
+							<a href="./register.html">Đăng kí</a>
+						</button>
+					</div>
+					<!-- close btn -->
+					<button id="close-menu" class="absolute top-6 left-8 lg:hidden">
+						<i class="fas fa-arrow-right text-xl"></i>
+					</button>
+				</div>
+
+				<div id="hamburger" class="space-y-1 lg:hidden cursor-pointer">
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+				</div>
+			</nav>
+			<!-- end navbar -->
+			<button id="scrollToTop" class="w-12 h-12 rounded-full bg-black bg-opacity-20 fixed bottom-5 right-5 z-10">
+				<i class="fal fa-angle-up font-medium text-white"></i>
+			</button>
+		</header>
+		<!-- end header -->
+		<main class="wide space-y-20" style="margin-top: 80px">
+			<!-- top blog -->
+			<section class="top-blogs text-gray-600 body-font">
+				<div class="my-4 mx-auto">
+					<div class="w-full mb-6">
+						<h3 class="sm:text-2xl text-2xl font-medium mb-2 text-gray-900">Bài viết nổi bật trong tuần</h3>
+						<div class="h-1 w-20 bg-lightBlue-700 rounded"></div>
+					</div>
+
+					<div class="blogs-container flex flex-wrap gap-8">
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<div class="bg-white">
+								<!-- 720x400 -->
+								<img
+									class="h-40 w-full object-cover object-center"
+									src="https://i.pinimg.com/564x/47/dd/7c/47dd7cdd4413c24ec2218aa796057278.jpg"
+									alt="#"
+								/>
+								<div class="px-4 py-2">
+									<h5 class="text-lg text-gray-900 font-medium mb-2">Ngạc nhiên chưa: Hà Nội là thành phố đắt đỏ nhất nước năm 2021!</h5>
+									<p class="leading-relaxed text-base">Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur adipisicing</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- quote -->
+			<section class="text-gray-600 body-font">
+				<div class="mx-auto">
+					<div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+						<i class="fas fa-quote-right text-2xl"></i>
+						<p class="leading-relaxed text-lg">
+							Hai mươi năm về sau bạn sẽ hối hận về những gì bạn không làm hơn là những gì bạn làm. Vậy nên hãy tháo dây, nhổ neo ra khỏi bến đỗ an
+							toàn. Hãy để cánh buồn của bạn đón trọn lấy gió, thám hiểm, mơ mộng, khám phá.
+						</p>
+						<span class="inline-block h-1 w-10 rounded bg-lightBlue-600 mt-8 mb-6"></span>
+					</div>
+				</div>
+			</section>
+			<!-- end quote -->
+
+			<!-- category -->
+			<section class="category text-gray-600 body-font">
+				<div class="flex flex-col text-center w-full mb-10">
+					<h2 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">Bài viết theo từng danh mục</h2>
+					<div class="flex justify-center gap-4 my-4 flex-wrap">
+						<button onclick="activeTab(event,'trai-nghiem')" class="tab-btn tab-pane active location">Trải nghiệm</button>
+						<button onclick="activeTab(event,'meo-vat')" class="tab-btn tab-pane location">Mẹo vặt</button>
+						<button onclick="activeTab(event,'top-dd')" class="tab-btn tab-pane location">Top địa điểm</button>
+						<button onclick="activeTab(event,'khac')" class="tab-btn tab-pane location">Khác</button>
+					</div>
+				</div>
+				<div class="tabs">
+					<div id="trai-nghiem" class="tab-item active">
+						<div class="post-container">
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/21/35/69/213569a168d4a4e5fef6023a1f4104ef.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/8d/9b/ca/8d9bcac87899cf9babf0f33e176f480e.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/a5/fd/d6/a5fdd6d3607285923b7752cd57ff42c2.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/8c/c7/a0/8cc7a092a4135060cc8f18a5db35fefc.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/fe/8f/d0/fe8fd0543465c3c8d99a1caf7a1a0617.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/f4/80/f8/f480f8b08a6814a435ea39e7686b07b9.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/a0/fd/05/a0fd058ae5fd295a1a22edfd39d16eb6.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/99/7f/6b/997f6bb6f9fc8b2748affe374fe31963.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="post-card">
+								<div class="rounded-sm h-full overflow-hidden">
+									<!-- 780x1,170 -->
+									<img alt="content" class="post-image" src="https://i.pinimg.com/564x/ca/76/45/ca764581c5aa3586fe5c0cc972906f72.jpg" />
+								</div>
+								<div class="post-main">
+									<h2 class="text-xl leading-relaxed font-medium mt-5">Cà phê sang nhất Thảo Điền, nhìn là ‘bật luôn công tắc gật đầu</h2>
+									<p class="text-base leading-relaxed mt-2">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero molestias veritatis aperiam quo enim, est quam officia placeat
+										voluptatibus iure.
+									</p>
+									<a href="#" class="flex items-center mt-3">
+										<span class="mr-2">Xem thêm</span>
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end category -->
+
+			<!-- recommend local -->
+			<section class="recommend">
+				<div class="flex flex-wrap justify-between items-center w-full mb-6">
+					<div>
+						<h3 class="sm:text-2xl text-2xl font-medium mb-2 text-gray-900">Địa điểm nên ghé thăm</h3>
+
+						<div class="h-1 w-20 bg-lightBlue-700 rounded"></div>
+					</div>
+					<div>
+						<p class="text-sm font-bold uppercase cursor-pointer hover:text-lightBlue-600">
+							<a href="#">Xem thêm</a> <i class="fas fa-angle-right text-base"></i>
+						</p>
+					</div>
+				</div>
+
+				<div class="recommend-container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="text-gray-600 body-font bg-gray-100 mt-8">
+			<div class="container px-8 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+				<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+					<a class="flex font-medium items-center md:justify-start justify-center text-gray-900">
+						<img class="max-h-full" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
+					</a>
+					<p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, amet!</p>
+				</div>
+				<div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="bg-gray-200">
+				<p class="text-gray-500 text-sm text-center sm:text-left py-2 px-1">© 2020 dulichviet.com.vn</p>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./assets/js/index.js"></script>
+	</body>
+</html>

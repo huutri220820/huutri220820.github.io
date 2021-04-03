@@ -114,6 +114,10 @@ input:focus {
 }
 
 /* card */
+.blog-card {
+	@apply border hover:shadow-md cursor-pointer bg-white hover:border-lightBlue-800 transition-all duration-300 transform hover:scale-105;
+}
+
 .recommend-card {
 	height: 288px;
 	max-width: 208px;
@@ -239,7 +243,7 @@ input:focus {
 }
 
 .intes-card__main {
-	@apply rounded-sm p-4 relative z-10 w-full text-white bg-black bg-opacity-0 transition-all transform translate-y-40 duration-300;
+	@apply rounded-sm p-8 relative z-10 w-full text-white bg-black bg-opacity-0 transition-all transform translate-y-36 duration-300;
 }
 
 .leading-relaxed {
@@ -279,6 +283,34 @@ input:focus {
 .location-item:hover,
 .location-item:active {
 	@apply text-lightBlue-600;
+}
+
+.post-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, min(360px, 100%));
+	grid-gap: 20px;
+	@apply justify-center lg:justify-between;
+}
+
+.post-card {
+	min-width: 360px;
+	max-width: 360px;
+	@apply select-none relative;
+}
+
+.post-card:hover .post-image {
+	@apply transform scale-110;
+}
+
+.post-image {
+	@apply object-cover object-center h-full w-full transition-all duration-300;
+}
+
+.post-main {
+	max-height: 250px;
+	min-height: 250px;
+	@apply absolute bottom-0 p-8 text-white bg-black bg-opacity-30;
 }
 
 @media (max-width: 1024px) {
