@@ -6,3 +6,10 @@ $.getJSON("assets/json/tinh_tp.json", function (data) {
 
 	$("#ds-diem-den-viet-nam .data").html(items);
 });
+
+document.getElementById("scroll-to-location").addEventListener("click", () => {
+	window.scrollTo({
+		behavior: "smooth",
+		top: document.getElementById("ds-diem-den").offsetTop,
+	});
+});
