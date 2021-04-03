@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Điểm đến</title>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+			integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav id="navbar" class="nav relative">
+				<img class="max-h-full nav-logo" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
+				<div id="nav__menu" class="flex justify-between items-center w-full h-full">
+					<ul id="hoz-menu" class="items-center justify-between flex">
+						<a href="../../index.html">
+							<li class="nav__menu-item">Trang chủ</li>
+						</a>
+						<a href="../../diem-den.html">
+							<li class="nav__menu-item active">Điểm đến</li>
+						</a>
+						<a href="../../hanh-trinh.html ">
+							<li class="nav__menu-item">Hành trình du lịch</li>
+						</a>
+					</ul>
+					<div class="nav__menu-action">
+						<button class="btn btn-outline">Đăng nhập</button>
+						<button class="btn btn-primary">Đăng kí</button>
+					</div>
+					<!-- close btn -->
+					<button id="close-menu" class="absolute top-6 left-8 lg:hidden">
+						<i class="fas fa-arrow-right text-xl"></i>
+					</button>
+				</div>
+
+				<div id="hamburger" class="space-y-1 lg:hidden cursor-pointer">
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+				</div>
+			</nav>
+
+			<button id="scrollToTop" class="w-12 h-12 rounded-full bg-black bg-opacity-20 fixed bottom-5 right-5 z-10">
+				<i class="fal fa-angle-up font-medium text-white"></i>
+			</button>
+		</header>
+		<!-- end header -->
+		<main class="wide space-y-20" style="margin-top: 80px">
+			<!-- location -->
+			<section class="blog">
+				<div class="blog-breadcrumb my-4 text-lg uppercase flex flex-row-reverse">
+					<ul class="flex space-x-3">
+						<li class="hover:text-lightBlue-700">
+							<a href="../../diem-den.html">Điểm đến /</a>
+						</li>
+						<li class="hover:text-lightBlue-700">
+							<a href="#">Việt Nam /</a>
+						</li>
+						<li class="hover:text-lightBlue-700">
+							<a href="#">Chi tiết địa điểm Lâm Đồng</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="blog-title text-4xl font-medium my-4">Lâm đồng</div>
+
+				<article class="blog-content">
+					<!-- blog content -->
+					<p class="code">nội dung ở đây</p>
+				</article>
+			</section>
+
+			<section class="comments text-gray-600">
+				<div class="w-full">
+					<h3 class="sm:text-2xl text-2xl font-medium mb-2 text-gray-900">Bình luận</h3>
+					<div class="h-1 w-20 bg-lightBlue-700 rounded"></div>
+				</div>
+				<div class="comments-content">
+					<div class="py-4">
+						<div class="h-full bg-gray-50 p-8 rounded">
+							<i class="fas fa-quote-right"></i>
+							<p class="leading-relaxed mb-6">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eveniet qui cupiditate exercitationem asperiores quibusdam doloremque
+								reiciendis, autem mollitia adipisci?
+							</p>
+							<a class="inline-flex items-center">
+								<img
+									alt="avatar"
+									src="https://i.pinimg.com/564x/d0/bb/de/d0bbdebf754ca691b3678fecafd31d79.jpg"
+									class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-top"
+								/>
+								<span class="flex-grow flex flex-col pl-4 text-gray-900 font-medium text-sm"> Lê Thành Vinh </span>
+							</a>
+						</div>
+					</div>
+					<div class="py-4">
+						<div class="h-full bg-gray-50 p-8 rounded">
+							<i class="fas fa-quote-right"></i>
+							<p class="leading-relaxed mb-6">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eveniet qui cupiditate exercitationem asperiores quibusdam doloremque
+								reiciendis, autem mollitia adipisci?
+							</p>
+							<a class="inline-flex items-center">
+								<img
+									alt="avatar"
+									src="https://i.pinimg.com/564x/d0/bb/de/d0bbdebf754ca691b3678fecafd31d79.jpg"
+									class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-top"
+								/>
+								<span class="flex-grow flex flex-col pl-4 text-gray-900 font-medium text-sm"> Lê Thành Vinh </span>
+							</a>
+						</div>
+					</div>
+
+					<div class="flex justify-center m-auto">
+						<button class="btn btn-primary">Xem thêm</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- recommend local -->
+			<section class="recommend">
+				<div class="flex flex-wrap justify-between items-center w-full mb-6">
+					<div>
+						<h3 class="sm:text-2xl text-2xl font-medium mb-2 text-gray-900">Địa điểm nên ghé thăm</h3>
+
+						<div class="h-1 w-20 bg-lightBlue-700 rounded"></div>
+					</div>
+					<div>
+						<p class="text-sm font-bold uppercase cursor-pointer hover:text-lightBlue-600">
+							<a href="#">Xem thêm</a> <i class="fas fa-angle-right text-base"></i>
+						</p>
+					</div>
+				</div>
+
+				<div class="recommend-container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="text-gray-600 body-font bg-gray-100 mt-8">
+			<div class="container px-8 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+				<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+					<a class="flex font-medium items-center md:justify-start justify-center text-gray-900">
+						<img class="max-h-full" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
+					</a>
+					<p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, amet!</p>
+				</div>
+				<div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h4 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h4>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="bg-gray-200">
+				<p class="text-gray-500 text-sm text-center sm:text-left py-2 px-1">© 2020 dulichviet.com.vn</p>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="../../assets/js/index.js"></script>
+		<script type="module" src="../../assets/js/diem-den.js"></script>
+	</body>
+</html>

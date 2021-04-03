@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Điểm đến</title>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+			integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav id="navbar" class="nav relative">
+				<img class="max-h-full nav-logo" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
+				<div id="nav__menu" class="flex justify-between items-center w-full h-full">
+					<ul id="hoz-menu" class="items-center justify-between flex">
+						<a href="./index.html">
+							<li class="nav__menu-item ">Trang chủ</li>
+						</a>
+						<a href="./diem-den.html">
+							<li class="nav__menu-item active">Điểm đến</li>
+						</a>
+						<a href="./hanh-trinh.html ">
+							<li class="nav__menu-item">Hành trình du lịch</li>
+						</a>
+					</ul>
+					<div class="nav__menu-action">
+						<button class="btn btn-outline">
+                            <a href="./login.html">Đăng nhập</a>
+                        </button>
+						<button class="btn btn-primary">
+                            <a href="./register.html">Đăng kí</a>
+                        </button>
+					</div>
+					<!-- close btn -->
+					<button id="close-menu" class="absolute top-6 left-8 lg:hidden">
+						<i class="fas fa-arrow-right text-xl"></i>
+					</button>
+				</div>
+
+				<div id="hamburger" class="space-y-1 lg:hidden cursor-pointer">
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+					<div class="h-1 w-8 bg-lightBlue-700"></div>
+				</div>
+			</nav>
+			<!-- end navbar -->
+			<section id="hero">
+				<div class="background-container">
+					<picture>
+						<source srcset="./assets/img/background/bg-2.jfif" media="(min-width: 1440px)" />
+						<source srcset="https://picsum.photos/640/360" media="(max-width: 640px)" />
+						<img src="https://picsum.photos/640/360" class="hero-background" />
+					</picture>
+				</div>
+				<div class="overlay"></div>
+				<div id="top">
+					<h1 class="text-4xl font-medium text-white mt-28 mb-4">Tìm kiếm điểm đến của bạn</h1>
+				</div>
+				<div class="wide relative">
+					<form onsubmit="return false" class="search-form bg-white flex text-gray-600 max-w-3xl m-auto rounded-sm">
+						<input type="search" class="p-2 flex-1 rounded-sm" placeholder="Tìm kiếm" />
+						<button class="px-2"><i class="fas fa-search"></i></button>
+					</form>
+					<ul class="text-xs font-mono text-white italic text-left max-w-3xl m-auto my-2 flex gap-2 flex-wrap">
+						<li class="tag-white">#ĐiệnBiên</li>
+						<li class="tag-white">#CaoBằng</li>
+						<li class="tag-white">#SơnLa</li>
+						<li class="tag-white">#HồChíMinh</li>
+						<li class="tag-white">#ĐàNẵng</li>
+						<li class="tag-white">#QuảngNam</li>
+					</ul>
+				</div>
+				<section class="text-white body-font relative wide">
+					<div class="container px-5 py-14 mx-auto">
+						<div class="flex flex-wrap -m-4 text-center">
+							<div class="p-4 sm:w-1/4 w-1/2">
+								<h2 class="title-font font-medium sm:text-4xl text-3xl">2.7K</h2>
+								<p class="leading-relaxed">Bài viết</p>
+							</div>
+							<div class="p-4 sm:w-1/4 w-1/2">
+								<h2 class="title-font font-medium sm:text-4xl text-3xl">1.8K</h2>
+								<p class="leading-relaxed">Hình ảnh</p>
+							</div>
+							<div class="p-4 sm:w-1/4 w-1/2">
+								<h2 class="title-font font-medium sm:text-4xl text-3xl">35</h2>
+								<p class="leading-relaxed">Quốc gia</p>
+							</div>
+							<div class="p-4 sm:w-1/4 w-1/2">
+								<h2 class="title-font font-medium sm:text-4xl text-3xl">4</h2>
+								<p class="leading-relaxed">Châu lục</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="relative h-20"></div>
+			</section>
+
+			<button id="scrollToTop" class="w-12 h-12 rounded-full bg-black bg-opacity-20 fixed bottom-5 right-5 z-10">
+				<i class="fal fa-angle-up font-medium text-white"></i>
+			</button>
+		</header>
+		<!-- end header -->
+		<main class="wide space-y-20">
+			<!-- location -->
+			<section id="location" class="text-gray-600 body-font">
+				<div class="mx-auto">
+					<div class="flex flex-col text-center w-full mb-10">
+						<h2 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">Điểm đến nổi bật</h2>
+						<p class="lg:w-2/3 mx-auto leading-relaxed text-base">Khám phá điểm đến tiếp theo cho hành trình tuyệt vời của bạn</p>
+						<div class="flex justify-center gap-4 my-4 flex-wrap">
+							<button onclick="activeTab(event,'vietnam', 'location')" class="tab-btn btn btn-outline active location">Việt Nam</button>
+							<button onclick="activeTab(event,'chau-a', 'location')" class="tab-btn btn btn-outline location">Châu Á</button>
+							<button onclick="activeTab(event,'chau-au', 'location')" class="tab-btn btn btn-outline location">Châu Âu</button>
+							<button onclick="activeTab(event,'chau-my', 'location')" class="tab-btn btn btn-outline location">Châu Mỹ</button>
+						</div>
+					</div>
+					<div class="tabs">
+						<h3 class="font-medium text-lg ml-2 my-2">Tỉnh thành nổi bật</h3>
+						<div id="vietnam" class="tab-item active location">
+							<div class="flex flex-wrap">
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/viet-nam/lam-dong.html">
+											<img
+												alt="lam-donh"
+												class="des-card__image"
+												src="https://vcdn-kinhdoanh.vnecdn.net/2020/10/22/307-1603187004-4395-1603361596.png"
+											/>
+											<div class="flex-grow">
+												<h4 class="des-card__title">
+													<a href="./diem-den/viet-nam/lam-dong.html">Lâm đồng</a>
+												</h4>
+												<p class="text-gray-500">25 điểm tham quan</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end tab -->
+
+						<div id="chau-a" class="tab-item location">
+							<div class="flex flex-wrap">
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-a/hong-kong.html">
+											<img
+												alt="hong-kong"
+												class="des-card__image"
+												src="https://fadoexpress.vn/b/wp-content/uploads/2020/01/gui-hang-di-hongkong.jpg"
+											/>
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-a/hong-kong.html">Hong Kong</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-a/hong-kong.html">
+											<img
+												alt="hong-kong"
+												class="des-card__image"
+												src="https://fadoexpress.vn/b/wp-content/uploads/2020/01/gui-hang-di-hongkong.jpg"
+											/>
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-a/hong-kong.html">Hong Kong</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-a/hong-kong.html">
+											<img
+												alt="hong-kong"
+												class="des-card__image"
+												src="https://fadoexpress.vn/b/wp-content/uploads/2020/01/gui-hang-di-hongkong.jpg"
+											/>
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-a/hong-kong.html">Hong Kong</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end tab -->
+
+						<div id="chau-au" class="tab-item location">
+							<div class="flex flex-wrap">
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-au/paris.html">
+											<img
+												alt="paris"
+												class="des-card__image"
+												src="https://vcdn1-dulich.vnecdn.net/2019/03/05/Phap-1-1551759006.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=bR4bSSXEbG8oRNye26Lg1w"
+											/>
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-au/paris.html">Paris</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-au/paris.html">
+											<img
+												alt="paris"
+												class="des-card__image"
+												src="https://vcdn1-dulich.vnecdn.net/2019/03/05/Phap-1-1551759006.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=bR4bSSXEbG8oRNye26Lg1w"
+											/>
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-au/paris.html">Paris</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-au/paris.html">
+											<img
+												alt="paris"
+												class="des-card__image"
+												src="https://vcdn1-dulich.vnecdn.net/2019/03/05/Phap-1-1551759006.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=bR4bSSXEbG8oRNye26Lg1w"
+											/>
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-au/paris.html">Paris</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end tab -->
+						<div id="chau-my" class="tab-item location">
+							<div class="flex flex-wrap">
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-my/hawaii.html">
+											<img alt="paris" class="des-card__image" src="https://tour.dulichvietnam.com.vn/uploads/tour/1554873265_Hawaii.jpg" />
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-my/hawaii.html">Hawaii</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-my/hawaii.html">
+											<img alt="paris" class="des-card__image" src="https://tour.dulichvietnam.com.vn/uploads/tour/1554873265_Hawaii.jpg" />
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-my/hawaii.html">Hawaii</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="des-card">
+									<div class="des-card__main">
+										<!-- 160 x 160 -->
+										<a href="./diem-den/chau-my/hawaii.html">
+											<img alt="paris" class="des-card__image" src="https://tour.dulichvietnam.com.vn/uploads/tour/1554873265_Hawaii.jpg" />
+										</a>
+										<div class="flex-grow">
+											<h4 class="des-card__title">
+												<a href="./diem-den/chau-my/hawaii.html">Hawaii</a>
+											</h4>
+											<p class="text-gray-500">25 điểm tham quan</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex justify-center m-auto">
+							<button class="btn btn-primary mt-4">Xem danh sách tỉnh thành</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end location -->
+
+			<section id="interests" class="text-gray-600 body-font">
+				<div class="mx-auto">
+					<div class="flex flex-col text-center w-full mb-10">
+						<h2 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">Du lịch theo sở thích</h2>
+						<div class="flex justify-center gap-4 my-4 flex-wrap">
+							<button onclick="activeTab(event,'trong-nuoc', 'interests')" class="tab-btn btn btn-outline active interests">Trong nước</button>
+							<button onclick="activeTab(event,'the-gioi', 'interests')" class="tab-btn btn btn-outline interests">Thế giới</button>
+						</div>
+					</div>
+					<div class="tabs">
+						<div id="trong-nuoc" class="tab-item interests active">
+							<section id="interests-internal">
+								<div class="flex justify-center gap-4 my-4 flex-wrap">
+									<button onclick="activeTab(event,'nghi-duong-i', 'interests-internal')" class="tab-btn tab-pane active interests-internal">
+										Nghỉ dưỡng
+									</button>
+									<button onclick="activeTab(event,'diem-phuot-i', 'interests-internal')" class="tab-btn tab-pane interests-internal">
+										Điểm phượt
+									</button>
+									<button onclick="activeTab(event,'nhip-dem-i', 'interests-internal')" class="tab-btn tab-pane interests-internal">Nhịp đêm</button>
+									<button onclick="activeTab(event,'thien-nhien-i', 'interests-internal')" class="tab-btn tab-pane interests-internal">
+										Thiên nhiên
+									</button>
+									<button onclick="activeTab(event,'co-kinh-i', 'interests-internal')" class="tab-btn tab-pane interests-internal">Cổ kính</button>
+								</div>
+								<div class="tabs">
+									<div id="nghi-duong-i" class="tab-item active interests-internal">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end tab -->
+
+									<div id="diem-phuot-i" class="tab-item interests-internal">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/21/0e/17/210e1720d1a2655024b973c3d44efcf7.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/21/0e/17/210e1720d1a2655024b973c3d44efcf7.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/21/0e/17/210e1720d1a2655024b973c3d44efcf7.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end tab -->
+
+									<div id="nhip-dem-i" class="tab-item interests-internal">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/71/9d/47/719d47fa767e811ed050d5037629df01.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/71/9d/47/719d47fa767e811ed050d5037629df01.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/71/9d/47/719d47fa767e811ed050d5037629df01.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end tab -->
+									<div id="thien-nhien-i" class="tab-item interests-internal">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/71/9d/47/719d47fa767e811ed050d5037629df01.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/47/7e/93/477e93a72caeeb4cd49fa9fbbf5ccf24.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/47/7e/93/477e93a72caeeb4cd49fa9fbbf5ccf24.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- end tab -->
+									<div id="co-kinh-i" class="tab-item interests-internal">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://i.pinimg.com/564x/47/7e/93/477e93a72caeeb4cd49fa9fbbf5ccf24.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+
+						<div id="the-gioi" class="tab-item interests">
+							<section id="interests-global">
+								<div class="flex justify-center gap-4 my-4 flex-wrap">
+									<button onclick="activeTab(event,'nghi-duong-g', 'interests-global')" class="tab-btn btn btn-outline active interests-global">
+										Nghỉ dưỡng
+									</button>
+									<button onclick="activeTab(event,'diem-phuot-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">
+										Điểm phượt
+									</button>
+									<button onclick="activeTab(event,'nhip-dem-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">
+										Nhịp đêm
+									</button>
+									<button onclick="activeTab(event,'thien-nhien-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">
+										Thiên nhiên
+									</button>
+									<button onclick="activeTab(event,'co-kinh-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">Cổ kính</button>
+								</div>
+								<div class="tabs">
+									<div id="nghi-duong-g" class="tab-item active interests-global">
+										<div class="flex flex-wrap">
+											<div class="intes-container">
+												<div class="intes-card">
+													<div class="flex relative cursor-default h-full">
+														<!-- 600x360 -->
+														<img
+															alt="gallery"
+															class="intes-card__image"
+															src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+														/>
+														<div class="intes-card__main">
+															<h5 class="intes-card__title">Đèo bảo lộc</h5>
+															<p class="intes-card__content">
+																Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+																Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+																deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+															</p>
+															<div class="flex flex-row-reverse">
+																<buton class="fas fa-arrow-right intes-card__action"></buton>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="intes-card">
+													<div class="flex relative cursor-default h-full">
+														<!-- 600x360 -->
+														<img
+															alt="gallery"
+															class="intes-card__image"
+															src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+														/>
+														<div class="intes-card__main">
+															<h5 class="intes-card__title">Đèo bảo lộc</h5>
+															<p class="intes-card__content">
+																Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+																Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+																deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+															</p>
+															<div class="flex flex-row-reverse">
+																<buton class="fas fa-arrow-right intes-card__action"></buton>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="intes-card">
+													<div class="flex relative cursor-default h-full">
+														<!-- 600x360 -->
+														<img
+															alt="gallery"
+															class="intes-card__image"
+															src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+														/>
+														<div class="intes-card__main">
+															<h5 class="intes-card__title">Đèo bảo lộc</h5>
+															<p class="intes-card__content">
+																Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+																Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+																deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+															</p>
+															<div class="flex flex-row-reverse">
+																<buton class="fas fa-arrow-right intes-card__action"></buton>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end tab -->
+
+									<div id="diem-phuot-g" class="tab-item interests-global">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end tab -->
+
+									<div id="nhip-dem-g" class="tab-item interests-global">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end tab -->
+									<div id="thien-nhien-g" class="tab-item interests-global">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- end tab -->
+									<div id="co-kinh-g" class="tab-item interests-global">
+										<div class="intes-container">
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="intes-card">
+												<div class="flex relative cursor-default h-full">
+													<!-- 600x360 -->
+													<img
+														alt="gallery"
+														class="intes-card__image"
+														src="https://owa.bestprice.vn/images/articles/uploads/san-bay-honolulu-hawaii-my-cach-trung-tam-bao-xa-cach-di-chuyen-tu-san-bay-den-trung-tam-5fd86e4e1b58d.jpg"
+													/>
+													<div class="intes-card__main">
+														<h5 class="intes-card__title">Đèo bảo lộc</h5>
+														<p class="intes-card__content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati consectetur nesciunt cupiditate in. Eos, illo!
+															Consequatur ab unde qui sint illo earum assumenda harum nesciunt. Veniam molestiae esse beatae dolor officia maiores
+															deleniti laboriosam saepe eos! Reprehenderit ipsum amet eveniet.
+														</p>
+														<div class="flex flex-row-reverse">
+															<buton class="fas fa-arrow-right intes-card__action"></buton>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end interests -->
+
+			<!-- ds tinh thanh -->
+			<section id="ds-diem-den" class="text-gray-600 body-font">
+				<div class="mx-auto">
+					<div class="flex flex-col text-center w-full mb-10">
+						<h2 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">Danh sách điểm đến</h2>
+						<div class="flex justify-center gap-4 my-4 flex-wrap">
+							<button onclick="activeTab(event,'ds-diem-den-viet-nam', 'ds-diem-den')" class="tab-btn btn btn-outline active ds-diem-den">
+								Việt Nam
+							</button>
+							<button onclick="activeTab(event,'ds-diem-den-chau-a', 'ds-diem-den')" class="tab-btn btn btn-outline ds-diem-den">Châu Á</button>
+							<button onclick="activeTab(event,'ds-diem-den-chau-au', 'ds-diem-den')" class="tab-btn btn btn-outline ds-diem-den">Châu Âu</button>
+							<button onclick="activeTab(event,'ds-diem-den-chau-my', 'ds-diem-den')" class="tab-btn btn btn-outline ds-diem-den">Châu Mỹ</button>
+						</div>
+					</div>
+					<div class="tabs">
+						<div id="ds-diem-den-viet-nam" class="tab-item active ds-diem-den">
+							<div class="flex flex-wrap gap-4 justify-between data">
+								<!-- load data here -->
+								<!-- <a class="location-item" href="#">ten</a> -->
+							</div>
+						</div>
+						<!-- end tab -->
+
+						<div id="ds-diem-den-chau-a" class="tab-item ds-diem-den">
+							<div class="flex flex-wrap gap-4 data">
+								<!-- load data here -->
+							</div>
+						</div>
+						<!-- end tab -->
+
+						<div id="ds-diem-den-chau-au" class="tab-item ds-diem-den">
+							<div class="flex flex-wrap gap-4 data">
+								<!-- load data here -->
+							</div>
+						</div>
+						<!-- end tab -->
+						<div id="ds-diem-den-chau-my" class="tab-item ds-diem-den">
+							<div class="flex flex-wrap gap-4 data">
+								<!-- load data here -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- recommend local -->
+			<section class="recommend">
+				<div class="flex flex-wrap justify-between items-center w-full mb-6">
+					<div>
+						<h3 class="sm:text-2xl text-2xl font-medium mb-2 text-gray-900">Địa điểm nên ghé thăm</h3>
+
+						<div class="h-1 w-20 bg-lightBlue-700 rounded"></div>
+					</div>
+					<div>
+						<p class="text-sm font-bold uppercase cursor-pointer hover:text-lightBlue-600">
+							<a href="#">Xem thêm</a> <i class="fas fa-angle-right text-base"></i>
+						</p>
+					</div>
+				</div>
+
+				<div class="recommend-container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="recommend-slide">
+							<div class="recommend-card">
+								<img class="rounded-md" src="https://dummyimage.com/208x288" alt="" />
+								<div class="overlay rounded-md"></div>
+								<div class="absolute left-0 bottom-0 w-full p-4 flex items-center">
+									<h5 class="text-white font-medium flex-1">Côn đảo</h5>
+									<button class="h-8 w-8 bg-lightBlue-700 rounded-full">
+										<i class="fas fa-arrow-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="text-gray-600 body-font bg-gray-100 mt-8">
+			<div class="container px-8 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+				<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+					<a class="flex font-medium items-center md:justify-start justify-center text-gray-900">
+						<img class="max-h-full" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
+					</a>
+					<p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, amet!</p>
+				</div>
+				<div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h4 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h4>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+						<nav class="list-none mb-10">
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">First Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Second Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Third Link</a>
+							</li>
+							<li>
+								<a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+							</li>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="bg-gray-200">
+				<p class="text-gray-500 text-sm text-center sm:text-left py-2 px-1">© 2020 dulichviet.com.vn</p>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./assets/js/index.js"></script>
+		<script type="module" src="./assets/js/diem-den.js"></script>
+	</body>
+</html>

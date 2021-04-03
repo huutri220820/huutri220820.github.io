@@ -6,7 +6,7 @@
 		"tailwindcss": "^2.0.4"
 	},
 	"scripts": {
-		"build:css": "postcss src/css/tailwind.css -o src/css/style.css",
-		"watch:css": "postcss -w src/css/tailwind.css -o src/css/style.css"
+		"build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css",
+		"watch:css": "postcss -w src/assets/css/tailwind.css -o src/assets/css/style.css"
 	}
 }
