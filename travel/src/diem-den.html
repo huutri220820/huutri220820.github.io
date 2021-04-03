@@ -20,14 +20,14 @@
 				<img class="max-h-full nav-logo" src="https://travel.com.vn/Content/ThemeHe/img/logo.png" alt="logo" />
 				<div id="nav__menu" class="flex justify-between items-center w-full h-full">
 					<ul id="hoz-menu" class="items-center justify-between flex">
-						<a href="./index.html">
-							<li class="nav__menu-item">Trang chủ</li>
+						<a class="nav__menu-item" href="./index.html">
+							<li>Trang chủ</li>
 						</a>
-						<a href="./diem-den.html">
-							<li class="nav__menu-item active">Điểm đến</li>
+						<a class="nav__menu-item active" href="./diem-den.html">
+							<li>Điểm đến</li>
 						</a>
-						<a href="./hanh-trinh.html ">
-							<li class="nav__menu-item">Hành trình du lịch</li>
+						<a class="nav__menu-item" href="./hanh-trinh.html ">
+							<li>Hành trình du lịch</li>
 						</a>
 					</ul>
 					<div class="nav__menu-action">
@@ -1063,19 +1063,15 @@
 						<div id="the-gioi" class="tab-item interests">
 							<section id="interests-global">
 								<div class="flex justify-center gap-4 my-4 flex-wrap">
-									<button onclick="activeTab(event,'nghi-duong-g', 'interests-global')" class="tab-btn btn btn-outline active interests-global">
+									<button onclick="activeTab(event,'nghi-duong-g', 'interests-global')" class="tab-btn tab-pane active interests-global">
 										Nghỉ dưỡng
 									</button>
-									<button onclick="activeTab(event,'diem-phuot-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">
-										Điểm phượt
-									</button>
-									<button onclick="activeTab(event,'nhip-dem-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">
-										Nhịp đêm
-									</button>
-									<button onclick="activeTab(event,'thien-nhien-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">
+									<button onclick="activeTab(event,'diem-phuot-g', 'interests-global')" class="tab-btn tab-pane interests-global">Điểm phượt</button>
+									<button onclick="activeTab(event,'nhip-dem-g', 'interests-global')" class="tab-btn tab-pane interests-global">Nhịp đêm</button>
+									<button onclick="activeTab(event,'thien-nhien-g', 'interests-global')" class="tab-btn tab-pane interests-global">
 										Thiên nhiên
 									</button>
-									<button onclick="activeTab(event,'co-kinh-g', 'interests-global')" class="tab-btn btn btn-outline interests-global">Cổ kính</button>
+									<button onclick="activeTab(event,'co-kinh-g', 'interests-global')" class="tab-btn tab-pane interests-global">Cổ kính</button>
 								</div>
 								<div class="tabs">
 									<div id="nghi-duong-g" class="tab-item active interests-global">
