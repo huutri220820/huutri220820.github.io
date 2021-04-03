@@ -290,7 +290,7 @@ input:focus {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, min(360px, 100%));
 	grid-gap: 20px;
-	@apply justify-center lg:justify-between;
+	@apply justify-center xl:justify-between;
 }
 
 .post-card {
